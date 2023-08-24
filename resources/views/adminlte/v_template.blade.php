@@ -19,11 +19,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Product Rotopia</h1>
+            <h1 class="m-0">Admin GIFO</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <P>Jumlah Product : 15</P>
+              <P>Jumlah Content : 15</P>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -53,7 +53,7 @@
         </thead>
 
         <tbody>
-          @foreach ($product as $item)
+          {{-- @foreach ($product as $item)
           <tr>
               <td>{{ $item->no_produk }}</td>
               <td>{{ $item->nama_produk }}</td>
@@ -95,7 +95,7 @@
       </div>
       <!-- /.modal -->
   </div>
-  @endforeach
+  @endforeach --}}
   
       </table>
 
