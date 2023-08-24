@@ -1,0 +1,67 @@
+/* css/style.css */
+
+/* Colors */
+:root {
+    --primary-color: #e60023; /* Red */
+    --secondary-color: #333333; /* Dark Gray */
+    --text-color: #777777; /* Light Gray */
+    --background-color: #fc0808; /* Off-White */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .judul {
+    color: var(--secondary-color);
+  }
+  
+  .card {
+    background-color: #f80707;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--secondary-color);
+  }
+  
+  .card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .card a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f40808;
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+  
+  .card a:hover {
+    background-color: #c4001d;
+  }
+  
