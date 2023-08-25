@@ -11314,3 +11314,133 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+#main{
+  margin: 0 25px;
+}
+.myboard{
+  width: 1000px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+#navbar-pinterest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em;
+}
+
+.menu {
+  margin: 1em;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: small;
+}
+
+#pinterest-icon {
+  display: flex;
+  align-items: center;
+}
+
+
+.finder {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 2em;
+  background-color: rgba(33, 25, 34,10%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding-left: 0.5em;
+}
+
+#notifications, #message, #profile-img, #desplegable {
+  margin: 0.5em;
+}
+
+.kategori {
+  margin: 1.2em;
+  text-decoration: none;
+}
+
+#subMenu {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  font-weight: 600;
+  font-size: small;
+}
+
+.myBoard img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+border-radius: 10px;
+box-sizing: border-box;
+}
+
+.myBoard {
+  columns: 7 250px ;
+  column-gap: 1em;
+}
+
+div .card-myBoard{
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  position: relative;
+}
+div .card-image {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+div .card-body{
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 2s;
+}
+.card-myBoard:hover .card-body{
+  top: 0;
+}
+
+div .card-title{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+div .card-sub-title{
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+div .card-info{
+  font-size: 12px;
+  line-height: 25px;
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+   nav{
+      width: 480px;
+  }  
+}
+
+
