@@ -13,7 +13,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Explore</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Create</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/create">Create</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Contact</a></li>
                        
                         @guest
