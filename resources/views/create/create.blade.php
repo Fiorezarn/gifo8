@@ -28,7 +28,7 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-      <a href="/dashboard/add" class="btn btn-primary btn-sm">Add Product</a>
+      <a href="/create/add" class="btn btn-primary btn-sm">Add Product</a>
     </div>
     
     @if (session('pesan'))
@@ -49,40 +49,38 @@
         </thead>
 
         <tbody>
-          {{-- @foreach ($product as $item)
+          @foreach ($posting as $data)
           <tr>
-              <td>{{ $item->no_produk }}</td>
-              <td>{{ $item->nama_produk }}</td>
-              <td>{{ $item->stock }}</td>
-              <td>IDR {{ number_format($item->harga, 0, ',', ',') }}</td>
-              <td>{{ $item->deskripsi }}</td>
-              <td><img src="{{ url('product-img/' . $item->photo) }}" width="100px"></td>
+              <td>{{ $data->categories }}</td>
+              <td>{{ $data->title }}</td>
+              <td>{{ $data->description }}</td>
+              <td><img src="{{ url('photo_posting/' . $data->photo) }}" width="100px"></td>
               <td>
-                  <a href="dashboard/detailitem/{{ $item->id }}" class="btn btn-sm btn-success">Detail</a>
-                  <a href="dashboard/edit/{{ $item->id }}" class="btn btn-sm btn-warning">Edit</a>
-                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $item->id }}">
+                  <a href="create/detailitem/{{ $data->id }}" class="btn btn-sm btn-success">Detail</a>
+                  <a href="create/edit/{{ $data->id }}" class="btn btn-sm btn-warning">Edit</a>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $data->id }}">
                       Delete
                   </button>
               </td>
           </tr>                
       @endforeach
       </tbody>
-      @foreach ($product as $item)
-      <div class="modal fade" id="delete{{ $item->id }}">
+      @foreach ($posting as $data)
+      <div class="modal fade" id="delete{{ $data->id }}">
         <div class="modal-dialog">
           <div class="modal-content bg-danger">
             <div class="modal-header">
-              <h4 class="modal-title">{{ $item->nama_produk }}</h4>
+              <h4 class="modal-title">{{ $data->title }}</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Apakah Anda Ingin Menghapus Product?</p>
+              <p>Apakah Anda Ingin Menghapus Postingan?</p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Tidak</button>
-              <a href="/dashboard/delete/{{ $item->id }}" class="btn btn-outline-light">Iya</a>
+              <a href="/create/delete/{{ $data->id }}" class="btn btn-outline-light">Iya</a>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -91,7 +89,7 @@
       </div>
       <!-- /.modal -->
   </div>
-  @endforeach --}}
+  @endforeach
   
       </table>
 

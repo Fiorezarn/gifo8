@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Models\Posting;
+use App\Models\Posting;
 
 class PostingController extends Controller
 {
+    public function __construct() {
+        $this->Posting = new Posting();
+    }
+    
     public function posting ()
     {
+        $data = [
+            'posting' => $this->Posting->get(),
+        ];
         return view ('create.create', $data);
     }
     
@@ -27,6 +34,7 @@ class PostingController extends Controller
     {
         return view ('create.addposting');
     }
+
     public function insertposting()
     {
         Request()->validate([
@@ -57,6 +65,7 @@ class PostingController extends Controller
         $this->Posting->addData($data);
         return redirect()->route('posting')->with('pesan','Data Berhasil Di Tambahkan !!');
     }
+    
     public function editposting($id)
     {
         if (!$this->Posting->detailData($id)) {

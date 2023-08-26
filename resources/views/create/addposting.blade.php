@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('adminlte.head')
+@include('create.head')
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -12,9 +12,9 @@
                 width="60">
         </div> --}}
 
-        @include('adminlte.navbar')
+        @include('create.navbar')
 
-        @include('adminlte.sidebar')
+        @include('create.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -23,7 +23,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Add Product</h1>
+                            <h1 class="m-0">Add Posting</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -32,52 +32,44 @@
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
-                    <form action="/dashboard/insert" method="POST" enctype="multipart/form-data">
+                    <form action="/create/insert" method="POST" enctype="multipart/form-data">
                         @csrf
     
                         <div class="content">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="">Id product</label>
-                                        <input name="id" class="form-control" value="{{ old('id') }}">
-                                            <div class="text-danger">
-                                            @error('id')
-                                            {{ $message }}
-                                            @enderror
-                                        </div>
-                                    </div>
 
                                     <div class="form-group">
-                                        <label for="">No product</label>
-                                        <input name="no_produk" class="form-control" value="{{ old('no_produk') }}">
+                                        <label for="">Title</label>
+                                        <input name="title" class="form-control" value="{{ old('title') }}">
                                         <div class="text-danger">
-                                        @error('no_produk')
+                                        @error('title')
                                         {{ $message }}
                                         @enderror
                                     </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="">Nama Product</label>
-                                        <input name="nama_produk" class="form-control" value="{{ old('nama_produk') }}">
+                                        <label for="">Categories</label>
+                                        <input name="categories" class="form-control" value="{{ old('categories') }}">
                                         <div class="text-danger">
-                                        @error('nama_produk')
+                                        @error('categories')
                                         {{ $message }}
                                         @enderror
                                     </div>
                                     </div>
 
+                                    
                                     <div class="form-group">
-                                        <label for="">Stock</label>
-                                        <input name="stock" class="form-control" value="{{ old('stock') }}">
+                                        <label for="">Description</label>
+                                        <input name="description" class="form-control" value="{{ old('description') }}">
                                         <div class="text-danger">
-                                        @error('stock')
+                                        @error('description')
                                         {{ $message }}
                                         @enderror
                                     </div>
                                     </div>
-
+                                    
                                     <div class="form-group">
                                         <label for="">Photo</label>
                                         <input type="file" name="photo" class="form-control">
@@ -89,28 +81,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="">Deskripsi</label>
-                                        <input name="deskripsi" class="form-control" value="{{ old('deskripsi') }}">
-                                        <div class="text-danger">
-                                        @error('deskripsi')
-                                        {{ $message }}
-                                        @enderror
-                                    </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Harga</label>
-                                        <input name="harga" class="form-control" value="{{ old('harga') }}">
-                                        <div class="text-danger">
-                                            @error('harga')
-                                            {{ $message }}
-                                            @enderror
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <a href="/dashboard" class="btn btn-danger btn-sm">Close</a>
+                                        <a href="/create" class="btn btn-danger btn-sm">Close</a>
                                         <button class="btn btn-primary btn-sm">Save</button>
                                     </div>
                     </form>
@@ -122,10 +93,10 @@
     </div>
 
 </div>
-    @include('adminlte.footer')
+    @include('create.footer')
 
 
-    @include('adminlte.script')
+    @include('create.script')
 </body>
 
 </html>

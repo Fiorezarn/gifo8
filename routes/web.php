@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostingController;
 
 Route::get('/', function () {
     return view('landingpage');
@@ -10,7 +11,7 @@ Route::get('/dashboard', function () {
 });
 
 
-Route::get('/create',[PostingController::class,'posting'])->name('dataitem');
+Route::get('/create',[PostingController::class,'posting'])->name('posting');
 Route::get('/create/detail/{id}',[PostingController::class,'detailposting']);
 Route::get('/create/add',[PostingController::class,'addposting']);
 Route::post('/create/insert',[PostingController::class,'insertposting']);
