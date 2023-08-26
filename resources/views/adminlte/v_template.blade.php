@@ -29,8 +29,8 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <a href="/dashboard/add" class="btn btn-primary btn-sm">Add Product</a>
-    <br><br>
+    {{-- <a href="/dashboard/add" class="btn btn-primary btn-sm">Add Product</a>
+    <br><br> --}}
     
     @if (session('pesan'))
     <div class="alert alert-success alert-dismissible">
@@ -42,11 +42,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <td>No</td>
-                <td>Nama Produk</td>
-                <td>Stock</td>
-                <td>Harga</td>
-                <td>Deskripsi</td>
+                <td>Categories</td>
+                <td>Caption</td>
                 <td>Photo</td>
                 <td>Action</td>
             </tr>
