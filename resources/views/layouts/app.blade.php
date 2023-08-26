@@ -35,9 +35,10 @@
 <body id="page-top">
     <div id="app">
         @include('partials.navbar')
-            <main class="py-4">
+            <main>
                 @yield('content')
             </main>
+        @include('partials.footer')
     </div>
 
     
