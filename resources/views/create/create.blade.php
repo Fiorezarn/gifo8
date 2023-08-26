@@ -42,7 +42,8 @@
         <thead>
             <tr>
                 <td>Categories</td>
-                <td>Caption</td>
+                <td>Title</td>
+                <td>Description</td>
                 <td>Photo</td>
                 <td>Action</td>
             </tr>
@@ -55,8 +56,8 @@
               <td>{{ $data->title }}</td>
               <td>{{ $data->description }}</td>
               <td><img src="{{ url('photo_posting/' . $data->photo) }}" width="100px"></td>
-              <td>
-                  <a href="create/detailitem/{{ $data->id }}" class="btn btn-sm btn-success">Detail</a>
+              <td style="width: 200px">
+                  <a href="create/detail/{{ $data->id }}" class="btn btn-sm btn-success">Detail</a>
                   <a href="create/edit/{{ $data->id }}" class="btn btn-sm btn-warning">Edit</a>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $data->id }}">
                       Delete

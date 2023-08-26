@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('adminlte.head')
+@include('create.head')
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        @include('adminlte.navbar')
+        @include('create.navbar')
 
-        @include('adminlte.sidebar')
+        @include('create.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -30,40 +30,35 @@
     </div>
     <table class="table">
         <tr>
-            <th width="100px">Nama Produk</th>
+            <th width="100px">Categories</th>
             <th width="30px">:</th>
-            <th>{{ $product->nama_produk }}</th>
+            <th>{{ $posting->categories }}</th>
         </tr>
         <tr>
-            <th width="100px">Stock</th>
+            <th width="100px">Title</th>
             <th width="30px">:</th>
-            <th>{{ $product->stock }}</th>
+            <th>{{ $posting->title }}</th>
         </tr>
         <tr>
-            <th width="100px">Harga</th>
+            <th width="100px">Description</th>
             <th width="30px">:</th>
-            <th>{{ number_format($product->harga, 0, ',', ',') }}</th>
-        </tr>
-        <tr>
-            <th width="100px">Deskripsi</th>
-            <th width="30px">:</th>
-            <th>{{ $product->deskripsi }}</th>
+            <th>{{ $posting->description }}</th>
         </tr>
         <tr>
             <th width="100px">Photo</th>
             <th width="30px">:</th>
-            <th><img src="{{ url('product-img/' . $product->photo) }}" width="400px"></th>
+            <th><img src="{{ url('photo_posting/' . $posting->photo) }}" width="400px"></th>
         </tr>
         <tr>
-            <th><a href="/dashboard" class="btn btn-success btn-sm">Back</a></th>
+            <th><a href="/create" class="btn btn-success btn-sm">Back</a></th>
         </tr>
     </table>
   </div>
   
 </div>
-@include('adminlte.footer')
+@include('create.footer')
 
-    @include('adminlte.script')
+    @include('create.script')
 </body>
 
 </html>

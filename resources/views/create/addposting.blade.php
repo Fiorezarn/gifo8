@@ -51,13 +51,20 @@
 
                                     <div class="form-group">
                                         <label for="">Categories</label>
-                                        <input name="categories" class="form-control" value="{{ old('categories') }}">
+                                        <select name="categories" class="form-control">
+                                            <option value="">Select Category</option>
+                                            <option value="Pakaian" {{ old('categories') === 'Pakaian' ? 'selected' : '' }}>Pakaian</option>
+                                            <option value="Celana" {{ old('categories') === 'Celana' ? 'selected' : '' }}>Celana</option>
+                                            <option value="Suit" {{ old('categories') === 'Suit' ? 'selected' : '' }}>Suit</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
                                         <div class="text-danger">
-                                        @error('categories')
-                                        {{ $message }}
-                                        @enderror
+                                            @error('categories')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
-                                    </div>
+                                    
 
                                     
                                     <div class="form-group">

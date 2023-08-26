@@ -38,11 +38,11 @@ class PostingController extends Controller
     
     public function detailposting ($id)
     {
-        if (!$this ->Posting->detailData($id)){
+        if (!$this ->posting->detailData($id)){
             abort(404);
         }
         $data = [
-            'posting' => $this ->Posting->detailData($id),
+            'posting' => $this ->posting->detailData($id),
         ];
         return view ('create.detailposting', $data);
     }
@@ -58,7 +58,7 @@ class PostingController extends Controller
             'title' => 'required|max:100',
             'categories' => 'required|max:20',
             'description' => 'required',
-            'photo' => 'required|mimes:jpg,jpeg,png,webp|max:100',
+            'photo' => 'required|mimes:jpg,jpeg,png,webp',
         ],[
             'id.required' => 'wajib diisi !!',
             'id.unique' => 'id Sudah Ada !!',
@@ -91,7 +91,7 @@ class PostingController extends Controller
             abort(404);
         }
         $data = [
-            'posting'=> $this->Posting->detailData($id),
+            'posting'=> $this->posting->detailData($id),
         ];
         return view ('create.editposting', $data);
     }
@@ -101,7 +101,7 @@ class PostingController extends Controller
             'title' => 'required|max:100',
             'categories' => 'required|max:20',
             'description' => 'required',
-            'photo' => 'required|mimes:jpg,jpeg,png,webp|max:100',
+            'photo' => 'mimes:jpg,jpeg,png,webp',
         ],[
             'id.required' => 'wajib diisi !!',
             'id.unique' => 'id Sudah Ada !!',
