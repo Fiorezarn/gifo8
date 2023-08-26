@@ -11,9 +11,6 @@
             </div>
         </header>
     
-                </div>
-            </div>
-        </section>
         <!-- PROFIL Grid-->
         <section class="page-section " id="main">
                 <input class="finder" type="text" placeholder="  Pencarian">
