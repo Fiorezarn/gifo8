@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('layouts.login')
+@section('title', 'Register - Gifo8')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
