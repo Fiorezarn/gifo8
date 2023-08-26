@@ -23,7 +23,6 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <P>Jumlah Content : 15</P>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
