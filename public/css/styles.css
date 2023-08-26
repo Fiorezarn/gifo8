@@ -11386,19 +11386,19 @@ box-sizing: border-box;
   column-gap: 1em;
 }
 
-div .card-myBoard{
+ .card-myBoard{
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
   border: 8px solid #fff;
   position: relative;
 }
-div .card-image {
+ .card-image {
   max-width: 100%;
   object-fit: cover;
   border-radius: 15px;
 }
-div .card-body{
+ .card-body{
   width: 100%;
   height: 100%;
   right: 0;
@@ -11418,19 +11418,19 @@ div .card-body{
   top: 0;
 }
 
-div .card-title{
+ .card-title{
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
 }
 
-div .card-sub-title{
+ .card-sub-title{
   text-transform: capitalize;
   font-size: 12px;
   font-weight: 300;
 }
 
-div .card-info{
+ .card-info{
   font-size: 12px;
   line-height: 25px;
   margin: 15px 0;
