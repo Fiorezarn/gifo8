@@ -49,7 +49,7 @@
         </thead>
 
         <tbody>
-          @foreach ($posting as $data)
+          @foreach ($postings as $data)
           <tr>
               <td>{{ $data->categories }}</td>
               <td>{{ $data->title }}</td>
@@ -65,7 +65,7 @@
           </tr>                
       @endforeach
       </tbody>
-      @foreach ($posting as $data)
+      @foreach ($postings as $data)
       <div class="modal fade" id="delete{{ $data->id }}">
         <div class="modal-dialog">
           <div class="modal-content bg-danger">

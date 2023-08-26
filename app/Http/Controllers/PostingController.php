@@ -4,20 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Posting;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PostingController extends Controller
 {
+    protected $posting;
+    protected $user;
+
     public function __construct() {
-        $this->Posting = new Posting();
+        $this->posting = new Posting();
+        $this->user = new User();
     }
     
-    public function posting ()
+    public function posting()
     {
+        $postings = [];
+    
+        if (Auth::check()) {
+            $user = $this->user->find(Auth::user()->id);
+            if ($user) {
+                $postings = $user->postings;
+            }
+        }
+    
         $data = [
-            'posting' => $this->Posting->get(),
+            'postings' => $postings, // Menggunakan 'postings' bukan 'posting'
         ];
-        return view ('create.create', $data);
+    
+        return view('create.create', $data);
     }
+    
     
     public function detailposting ($id)
     {
@@ -56,19 +73,21 @@ class PostingController extends Controller
         $file->move(public_path('photo_posting'), $fileName);
 
         $data = [
+            'name_user' => Auth::user()->name,
+            'user_id' => Auth::user()->id,
             'title' => Request()->title,
             'categories' => Request()->categories,
             'description' => Request()->description,
             'photo' => $fileName,
         ];
 
-        $this->Posting->addData($data);
+        $this->posting->addData($data);
         return redirect()->route('posting')->with('pesan','Data Berhasil Di Tambahkan !!');
     }
     
     public function editposting($id)
     {
-        if (!$this->Posting->detailData($id)) {
+        if (!$this->posting->detailData($id)) {
             abort(404);
         }
         $data = [
@@ -105,7 +124,7 @@ class PostingController extends Controller
             'photo' => $fileName,
         ];
 
-        $this->Posting->editData($id, $data);
+        $this->posting->editData($id, $data);
         }else {
             //jika tidak ingin ganti foto
             $data = [
@@ -113,18 +132,18 @@ class PostingController extends Controller
                 'categories' => Request()->categories,
                 'description' => Request()->description,
             ];
-            $this->Posting->editData($id, $data);
+            $this->posting->editData($id, $data);
         }
         return redirect()->route('posting')->with('pesan','Data Berhasil Di Update !!');
     }
     public function deleteposting($id)
     {
         //hapus foto
-        $posting = $this->Posting->detailData($id);
+        $posting = $this->posting->detailData($id);
         if ($posting->photo <> "") {
             unlink(public_path('photo_posting') . '/' . $posting->photo);
         }   
-        $this->Posting->deleteData($id);
+        $this->posting->deleteData($id);
         return redirect()->route('posting')->with('pesan','Data Berhasil Di Hapus !!');
 
     }
