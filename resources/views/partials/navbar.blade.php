@@ -13,7 +13,11 @@
                     <ul class="navbar-nav text-uppercase ms-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Explore</a></li>
+                        @auth
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/create">Create</a></li>
+                        @else
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Create</a></li>
+                        @endauth
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Contact</a></li>
                        
                         @guest
@@ -33,7 +37,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
+                                @if (Auth::check() && Auth::user()->role == '0')
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -45,6 +49,20 @@
                                         @csrf
                                     </form>
                                 </div>
+                                @elseif(Auth::check() && Auth::user()->role == '1')
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('/dashboard') }}">{{ __('Dashboard') }}</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                                @endif
                             </li>
                         @endguest
                     </ul>
