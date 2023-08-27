@@ -10,8 +10,8 @@ class Explore extends Model
 {
     protected $table='postings';
 
-    public function detailCategories($categories)
+    public function allData()
     {
-        return DB::table('postings')->where('categories', $categories)->get();
+        return DB::table('postings')->get();
     }
 }
