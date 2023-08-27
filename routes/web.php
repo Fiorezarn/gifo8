@@ -2,12 +2,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ExploreController;
 
 // Route::get('/', function () {
 //     return view('landingpage');
 // });
 Route::get('/',[App\Http\Controllers\PostingController::class,'allposting'])->name('landingpage');
-Route::get('/explore', function () { return view('explore'); });
+// Route::get('/explore', function () { return view('explore'); });
 
 Auth::routes();
 //////////////////////////////////////////Buat Admin//////////////////////////////////////////////////////////////////////////
@@ -27,6 +28,10 @@ Route::group(['middleware' => ['User']], function () {
     Route::post('/create/update/{id}',[PostingController::class,'updateposting']);
     Route::get('/create/delete/{id}',[PostingController::class,'deleteposting']);
     });
+
+    Route::get('/explore', [ExploreController::class,'index']);
+    Route::get('/explore/{categories}', [ExploreController::class,'category']);
+
 
 
 
