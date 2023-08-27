@@ -98,11 +98,17 @@ class PostingController extends Controller
     public function updateposting($id)
     {
         Request()->validate([
-            'title' => 'required|max:100',
+            'title' => 'required|max:20',
             'categories' => 'required|max:20',
-            'description' => 'required',
+            'description' => 'required|100',
             'photo' => 'mimes:jpg,jpeg,png,webp',
         ],[
+            'title.required' => 'The title field is required.',
+            'title.max' => 'The title field must not exceed 20 characters.',
+            'categories.required' => 'The categories field is required.',
+            'categories.max' => 'The categories field must not exceed 20 characters.',
+            'description.required' => 'The description field is required.',
+            'description.max' => 'The description field must not exceed 100 characters.',
             'id.required' => 'wajib diisi !!',
             'id.unique' => 'id Sudah Ada !!',
             'id.min' => 'Min 1 Karakter',
