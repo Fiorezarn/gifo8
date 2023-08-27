@@ -17,13 +17,61 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+                  <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-success">
+                      <div class="inner">
+                          <h3>{{$totalposting}}</h3>
+                          <p>Total Posting</p>
+                      </div>
+                      <div class="icon">
+                          <i class="ion ion-cube"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-warning">
+                      <div class="inner">
+                          <h3>{{$totaluser}}</h3>
+                          <p>User Registrations</p>
+                      </div>
+                      <div class="icon">
+                          <i class="ion ion-person-stalker"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-danger">
+                      <div class="inner">
+                          <h3>{{$totaladmin}}</h3>
+                          <p>Role Admin</p>
+                      </div>
+                      <div class="icon">
+                          <i class="ion ion-person"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+              </div>
+              <!-- ./col -->
+          </div>
+    
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Admin GIFO</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <P>Jumlah Content : 15</P>
+              <P>Jumlah Content : {{$totalposting}}</P>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -42,25 +90,28 @@
     <table class="table table-bordered">
         <thead>
             <tr>
+                <td>No</td>
+                <td>User</td>
                 <td>Categories</td>
-                <td>Caption</td>
+                <td>Title</td>
+                <td>Description</td>
                 <td>Photo</td>
                 <td>Action</td>
             </tr>
         </thead>
 
         <tbody>
-          {{-- @foreach ($product as $item)
+          <?php $no=1; ?>
+          @foreach ($admin as $item)
           <tr>
-              <td>{{ $item->no_produk }}</td>
-              <td>{{ $item->nama_produk }}</td>
-              <td>{{ $item->stock }}</td>
-              <td>IDR {{ number_format($item->harga, 0, ',', ',') }}</td>
-              <td>{{ $item->deskripsi }}</td>
-              <td><img src="{{ url('product-img/' . $item->photo) }}" width="100px"></td>
+              <td>{{ $no++ }}</td>
+              <td>{{ $item->name_user }}</td>
+              <td>{{ $item->categories }}</td>
+              <td>{{ $item->title }}</td>
+              <td>{{ $item->description }}</td>
+              <td><img src="{{ url('photo_posting/' . $item->photo) }}" width="100px"></td>
               <td>
                   <a href="dashboard/detailitem/{{ $item->id }}" class="btn btn-sm btn-success">Detail</a>
-                  <a href="dashboard/edit/{{ $item->id }}" class="btn btn-sm btn-warning">Edit</a>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $item->id }}">
                       Delete
                   </button>
@@ -68,12 +119,12 @@
           </tr>                
       @endforeach
       </tbody>
-      @foreach ($product as $item)
+      @foreach ($admin as $item)
       <div class="modal fade" id="delete{{ $item->id }}">
         <div class="modal-dialog">
           <div class="modal-content bg-danger">
             <div class="modal-header">
-              <h4 class="modal-title">{{ $item->nama_produk }}</h4>
+              <h4 class="modal-title">{{ $item->title }}</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -92,10 +143,11 @@
       </div>
       <!-- /.modal -->
   </div>
-  @endforeach --}}
+  @endforeach
   
       </table>
 
+</div>
 </div>
 @include('adminlte.footer')
 

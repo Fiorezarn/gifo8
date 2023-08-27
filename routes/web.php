@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostingController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('landingpage');
@@ -10,9 +11,7 @@ Auth::routes();
 //////////////////////////////////////////Buat Admin//////////////////////////////////////////////////////////////////////////
 Route::group(['middleware' => ['Status']], function () {
     //////////////////////////////////////////////////////////////////////////
-    Route::get('/dashboard', function () {
-        return view('adminlte.v_template');
-    });
+    Route::get('/dashboard', [AdminController::class,'index'])->name('Admin');
 });
 
 //////////////////////////////////////////Buat User//////////////////////////////////////////////////////////////////////////
