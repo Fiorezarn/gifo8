@@ -111,7 +111,7 @@
               <td>{{ $item->description }}</td>
               <td><img src="{{ url('photo_posting/' . $item->photo) }}" width="100px"></td>
               <td>
-                  <a href="dashboard/detailitem/{{ $item->id }}" class="btn btn-sm btn-success">Detail</a>
+                  <a href="dashboard/detail/{{ $item->id }}" class="btn btn-sm btn-success">Detail</a>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $item->id }}">
                       Delete
                   </button>

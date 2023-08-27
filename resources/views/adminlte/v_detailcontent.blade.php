@@ -30,29 +30,29 @@
     </div>
     <table class="table">
         <tr>
-            <th width="100px">Nama Produk</th>
+            <th width="100px">Nama Users</th>
             <th width="30px">:</th>
-            <th>{{ $product->nama_produk }}</th>
+            <th>{{ $admin->name_user }}</th>
         </tr>
         <tr>
-            <th width="100px">Stock</th>
+            <th width="100px">Categories</th>
             <th width="30px">:</th>
-            <th>{{ $product->stock }}</th>
+            <th>{{ $admin->categories }}</th>
         </tr>
         <tr>
-            <th width="100px">Harga</th>
+            <th width="100px">Title</th>
             <th width="30px">:</th>
-            <th>{{ number_format($product->harga, 0, ',', ',') }}</th>
+            <th>{{ $admin->title }}</th>
         </tr>
         <tr>
-            <th width="100px">Deskripsi</th>
-            <th width="30px">:</th>
-            <th>{{ $product->deskripsi }}</th>
-        </tr>
+          <th width="100px">Description</th>
+          <th width="30px">:</th>
+          <th>{{ $admin->description }}</th>
+      </tr>
         <tr>
             <th width="100px">Photo</th>
             <th width="30px">:</th>
-            <th><img src="{{ url('product-img/' . $product->photo) }}" width="400px"></th>
+            <th><img src="{{ url('photo_posting/' . $admin->photo) }}" width="400px"></th>
         </tr>
         <tr>
             <th><a href="/dashboard" class="btn btn-success btn-sm">Back</a></th>
