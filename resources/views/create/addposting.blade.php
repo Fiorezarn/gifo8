@@ -56,6 +56,9 @@
                                             <option value="Pakaian" {{ old('categories') === 'Pakaian' ? 'selected' : '' }}>Pakaian</option>
                                             <option value="Celana" {{ old('categories') === 'Celana' ? 'selected' : '' }}>Celana</option>
                                             <option value="Suit" {{ old('categories') === 'Suit' ? 'selected' : '' }}>Suit</option>
+                                            <option value="Woman" {{ old('categories') === 'Woman' ? 'selected' : '' }}>Woman</option>
+                                            <option value="Man" {{ old('categories') === 'Man' ? 'selected' : '' }}>Man</option>
+                                            <option value="Feminism" {{ old('categories') === 'Feminism' ? 'selected' : '' }}>Feminism</option>
                                             <!-- Add more options as needed -->
                                         </select>
                                         <div class="text-danger">
