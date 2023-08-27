@@ -15,6 +15,7 @@ Auth::routes();
 Route::group(['middleware' => ['Status']], function () {
     //////////////////////////////////////////////////////////////////////////
     Route::get('/dashboard', [AdminController::class,'index'])->name('Admin');
+    Route::get('/dashboard/detail/{id}', [AdminController::class,'detailadmin'])->name('Admin');
 });
 
 //////////////////////////////////////////Buat User//////////////////////////////////////////////////////////////////////////

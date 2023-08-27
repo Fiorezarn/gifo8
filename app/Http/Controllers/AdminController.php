@@ -24,4 +24,16 @@ class AdminController extends Controller
         ];
         return view('adminlte.v_template', $data);
     }
+
+    public function detailadmin ($id)
+    {
+        if (!$this ->Posting->detailData($id)){
+            abort(404);
+        }
+        $data = [
+            'admin' => $this ->Posting->detailData($id),
+        ];
+        return view ('adminlte.v_detailcontent', $data);
+    }
+
 }
