@@ -147,4 +147,12 @@ class PostingController extends Controller
         return redirect()->route('posting')->with('pesan','Data Berhasil Di Hapus !!');
 
     }
+    public function allposting()
+    {
+        $data = [
+            'postings' => $this->posting->get()
+        ];
+        return view('landingpage', $data);
+    } 
 }
+

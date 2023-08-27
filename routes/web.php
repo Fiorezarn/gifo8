@@ -3,9 +3,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\AdminController;
 
-Route::get('/', function () {
-    return view('landingpage');
-});
+// Route::get('/', function () {
+//     return view('landingpage');
+// });
+Route::get('/',[App\Http\Controllers\PostingController::class,'allposting'])->name('landingpage');
+Route::get('/explore', function () { return view('explore'); });
 
 Auth::routes();
 //////////////////////////////////////////Buat Admin//////////////////////////////////////////////////////////////////////////
@@ -26,7 +28,8 @@ Route::group(['middleware' => ['User']], function () {
     Route::get('/create/delete/{id}',[PostingController::class,'deleteposting']);
     });
 
+
+
 Auth::routes();
-Route::get('/explore', [App\Http\Controllers\HomeController::class, 'explore'])->name('explore');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

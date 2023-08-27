@@ -11494,10 +11494,11 @@ box-sizing: border-box;
   transition: 2s;
 }
  .card-info-explore{
-  font-size: 12px;
+  font-size: 20px;
   line-height: 25px;
   margin: 15px 0;
   font-weight: 400;
+  color: #ffc800;
 }
 
 

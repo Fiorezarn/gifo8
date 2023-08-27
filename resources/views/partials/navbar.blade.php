@@ -11,8 +11,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/') }}#header-main">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/explore">Explore</a></li>
                         @auth
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/create">Create</a></li>
                         @else
