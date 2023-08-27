@@ -2,9 +2,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostingController;
 
-Route::get('/', function () {
-    return view('landingpage');
-});
+// Route::get('/', function () {
+//     return view('landingpage');
+// });
+Route::get('/',[App\Http\Controllers\PostingController::class,'allposting'])->name('landingpage');
+
+
 
 Auth::routes();
 //////////////////////////////////////////Buat Admin//////////////////////////////////////////////////////////////////////////
@@ -27,7 +30,9 @@ Route::group(['middleware' => ['User']], function () {
     Route::get('/create/delete/{id}',[PostingController::class,'deleteposting']);
     });
 
+
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/explore', [App\Http\Controllers\HomeController::class, 'explore'])->name('explore');
+
 
