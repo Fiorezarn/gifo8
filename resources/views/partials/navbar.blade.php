@@ -1,7 +1,7 @@
  <!-- Navigation-->
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     GIFO
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/') }}#header-main">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/home') }}#header-main">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/explore">Explore</a></li>
                         @auth
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/create">Create</a></li>

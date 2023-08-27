@@ -159,6 +159,6 @@ class PostingController extends Controller
             'postings' => $this->posting->get()
         ];
         return view('landingpage', $data);
-    } 
+    }
 }
 

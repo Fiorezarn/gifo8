@@ -13,7 +13,7 @@
     <section class="page-section-explore " id="main-explore">
             <div class="myBoard-explore">
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/pakaian">
                         <div class="card-image-explore">
                             <img src="../../kategori/pakaian.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/celana">
                         <div class="card-image-explore">
                             <img src="../../kategori/celana.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
@@ -33,7 +33,7 @@
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/suit">
                         <div class="card-image-explore">
                             <img src="../../kategori/suit.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
@@ -43,7 +43,7 @@
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/women">
                         <div class="card-image-explore">
                             <img src="../../kategori/women.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
@@ -53,7 +53,7 @@
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/men">
                         <div class="card-image-explore">
                             <img src="../../kategori/mens.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
-                    <a href="explore/{{ $explore[0]->categories }}">
+                    <a href="explore/formal">
                         <div class="card-image-explore">
                             <img src="../../kategori/formal.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>

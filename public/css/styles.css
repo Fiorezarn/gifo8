@@ -11437,6 +11437,15 @@ box-sizing: border-box;
   font-weight: 400;
 }
 
+.showmore{
+  font-size: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 @media screen and (max-width: 480px) {
    nav{
       width: 480px;
@@ -11671,4 +11680,9 @@ ul {
     max-width: 220px;
 }
 
+.footer-brand{
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffc800;
+}
 

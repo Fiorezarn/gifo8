@@ -27,7 +27,7 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-      <a href="/create/add" class="btn btn-primary btn-sm">Add Product</a>
+      <a href="/create/add" class="btn btn-primary btn-sm">Add Posting</a>
     </div>
     
     @if (session('pesan'))

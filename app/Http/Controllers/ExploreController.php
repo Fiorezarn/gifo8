@@ -21,12 +21,52 @@ class ExploreController extends Controller
         return view('explore', $data);
     }
     
-    public function category ($categories) 
+    public function pakaian () 
     {
-        if (!$this->Explore->detailCategories($categories)) {
-            abort(404);
-        }
+        $data = [
+        'posting' => $this->Explore->where('categories', 'pakaian')->get(),
+        ];
 
-        return view('category');
+        return view('postingpakaian', $data);
+    }
+    public function celana () 
+    {
+        $data = [
+        'posting' => $this->Explore->where('categories', 'celana')->get(),
+        ];
+
+        return view('postingcelana', $data);
+    }
+    public function suit () 
+    {
+        $data = [
+        'posting' => $this->Explore->where('categories', 'suit')->get(),
+        ];
+
+        return view('postingsuit', $data);
+    }
+    public function women () 
+    {
+        $data = [
+        'posting' => $this->Explore->where('categories', 'women')->get(),
+        ];
+
+        return view('postingwomen', $data);
+    }
+    public function mens () 
+    {
+        $data = [
+        'posting' => $this->Explore->where('categories', 'men')->get(),
+        ];
+
+        return view('postingmens', $data);
+    }
+    public function formal () 
+    {
+        $data = [
+        'posting' => $this->Explore->where('categories', 'formal')->get(),
+        ];
+
+        return view('postingformal', $data);
     }
 }

@@ -32,7 +32,12 @@ Route::group(['middleware' => ['User']], function () {
     });
 
     Route::get('/explore', [ExploreController::class,'index']);
-    Route::get('/explore/{categories}', [ExploreController::class,'category']);
+    Route::get('/explore/pakaian', [ExploreController::class,'pakaian']);
+    Route::get('/explore/celana', [ExploreController::class,'celana']);
+    Route::get('/explore/suit', [ExploreController::class,'suit']);
+    Route::get('/explore/women', [ExploreController::class,'women']);
+    Route::get('/explore/men', [ExploreController::class,'mens']);
+    Route::get('/explore/formal', [ExploreController::class,'formal']);
 
 
 
