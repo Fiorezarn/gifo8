@@ -56,7 +56,7 @@ class ExploreController extends Controller
     public function mens () 
     {
         $data = [
-        'posting' => $this->Explore->where('categories', 'mens')->get(),
+        'posting' => $this->Explore->where('categories', 'men')->get(),
         ];
 
         return view('postingmens', $data);

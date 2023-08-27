@@ -4,7 +4,9 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                         <div class="logo-widget footer-widget">
-                            <figure class="logo-box"><a href="#"><img src="https://i.ibb.co/QDy827D/ak-logo.png" alt=""></a></figure>
+                            <a class="footer-brand" href="{{ url('/home') }}">
+                                GIFO
+                            </a>
                             <div class="text">
                                 <p>Lorem ipsum dolor amet consectetur adi pisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis.nostrud exercita.laboris nisi ut aliquip ea commodo conse quatuis aute irure.</p>
                             </div>
@@ -18,24 +20,13 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
                         <div class="service-widget footer-widget">
-                            <div class="footer-title">Services</div>
+                            <div class="footer-title">Contact</div>
                             <ul class="list">
-                                <li><a href="#">Water Surve</a></li>
-                                <li><a href="#">Education for all</a></li>
-                                <li><a href="#">Food Serving</a></li>
+                                <li><a href="#">Alamat</a></li>
+                                <li><a href="#">WA</a></li>
                                 <li><a href="#">Animal Saves</a></li>
                                 <li><a href="#">Help Orphan</a></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
-                        <div class="contact-widget footer-widget">
-                            <div class="footer-title">Contacts</div>
-                            <div class="text">
-                                <p>Lorem Ipsum, simply dummy text, printing, Chandigarh</p>
-                                <p>+2(784) 1223323</p>
-                                <p>info@example.com</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,12 +38,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 column">
-                    <div class="copyright"><a href="#">Anup</a> &copy; 2019 All Right Reserved</div>
+                    <div class="copyright"><a href="#">GIFO</a> &copy; 2023 All Right Reserved</div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 column">
                     <ul class="footer-nav">
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a>Terms of Service</a></li>
+                        <li><a>Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

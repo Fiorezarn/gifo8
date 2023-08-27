@@ -48,8 +48,7 @@
         }
 
         updateTime();
-    });
-
+    
         const searchInput = document.getElementById('searchInput');
         const postings = document.querySelectorAll('.card-myBoard');
 

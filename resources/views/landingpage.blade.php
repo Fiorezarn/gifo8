@@ -7,13 +7,12 @@
             <div class="container">
                 <div class="masthead-heading text-uppercase">Welcome To Gates Inspirated Fashion Outfit</div>
                 <div class="masthead-subheading">Temukan Inspirasi Berpakaian Sesuai Genre Kesukaan Kalian</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/home">Lets Join With Us</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#main-landing">Lets Join With Us</a>
             </div>
         </header>
     
         <!-- PROFIL Grid-->
-        <section class="page-section " id="main">
-                <input class="finder" type="text" placeholder="  Pencarian">
+        <section class="page-section " id="main-landing">
                 <div class="myBoard" >
                 @foreach ($postings as $posting)    
                     <div class="card-myBoard">
@@ -28,6 +27,9 @@
                     </div>
                 @endforeach
                 </div>
+            <div class="showmore">
+                <a href="/explore">Show More >>></a>
+            </div>
         </section>
        
         <!-- Bootstrap core JS-->
