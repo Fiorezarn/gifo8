@@ -6,8 +6,7 @@ use App\Http\Controllers\PostingController;
 //     return view('landingpage');
 // });
 Route::get('/',[App\Http\Controllers\PostingController::class,'allposting'])->name('landingpage');
-
-
+Route::get('/explore', function () { return view('explore'); });
 
 Auth::routes();
 //////////////////////////////////////////Buat Admin//////////////////////////////////////////////////////////////////////////

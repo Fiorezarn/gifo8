@@ -15,60 +15,60 @@
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/pakaian.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Pakaian</p>
                         </div>
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/celana.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Celana</p>
                         </div>
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/suit.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Suit</p>
                         </div>
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/women.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Women</p>
                         </div>
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/mens.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Men</p>
                         </div>
                     </a>
                 </div>
                 <div class="card-myBoard-explore">
                     <a href="/home">
                         <div class="card-image-explore">
-                            <img src="https://i.pinimg.com/originals/f5/f5/43/f5f5430582da3063a838e7c145ec1066.jpg" alt="Chica posando en su bicicleta" width="300">
+                            <img src="../../kategori/formal.jpg" alt="Chica posando en su bicicleta" width="300">
                         </div>
                         <div class="card-body-explore">
-                            <p class="card-info-explore">Kategori</p>
+                            <p class="card-info-explore">Formal</p>
                         </div>
                     </a>
                 </div>

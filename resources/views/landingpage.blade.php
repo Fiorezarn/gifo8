@@ -15,9 +15,12 @@
         <section class="page-section " id="main">
                 <input class="finder" type="text" placeholder="  Pencarian">
                 <div id="subMenu">
-                    <a class="kategori" href="#">Olahraga</a>
-                    <a class="kategori" href="#">Race</a>
-                    <a class="kategori" href="#">Fassion</a>
+                    <a class="kategori" >Pakaian</a>
+                    <a class="kategori" >Celana</a>
+                    <a class="kategori" >Suit</a>
+                    <a class="kategori" >Women</a>
+                    <a class="kategori" >Man</a>
+                    <a class="kategori" >Formal</a>
                 </div>
                 <div class="myBoard" >
                 @foreach ($postings as $posting)    
