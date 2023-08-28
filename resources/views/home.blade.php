@@ -14,18 +14,22 @@
         <!-- PROFIL Grid-->
         <section class="page-section " id="main-home">
                 <div class="myBoard" >
-                @foreach ($postings as $posting)    
-                    <div class="card-myBoard">
-                        <div class="card-image">
-                            <img src="{{ url('photo_posting/' . $posting->photo) }}" alt="{{ $posting-> title }}" width="300">
+                    @php $count = 0; @endphp
+                    @foreach ($postings as $posting)
+                    @if ($count < 20)    
+                        <div class="card-myBoard">
+                            <div class="card-image">
+                                <img src="{{ url('photo_posting/' . $posting->photo) }}" alt="{{ $posting-> title }}" width="300">
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title">{{ $posting-> title }}</h1>
+                                <p class="card-sub-title">{{ $posting-> categories }}</p>
+                                <p class="card-info">{{ $posting-> description }}</p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h1 class="card-title">{{ $posting-> title }}</h1>
-                            <p class="card-sub-title">{{ $posting-> categories }}</p>
-                            <p class="card-info">{{ $posting-> description }}</p>
-                        </div>
-                    </div>
-                @endforeach
+                    @endif
+                    @php $count++; @endphp
+                    @endforeach
                 </div>
             <div class="showmore">
                 <a href="/explore">Show More >>></a>

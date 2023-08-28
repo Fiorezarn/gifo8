@@ -14,7 +14,9 @@
         <!-- PROFIL Grid-->
         <section class="page-section " id="main-landing">
                 <div class="myBoard" >
-                @foreach ($postings as $posting)    
+                @php $count = 0; @endphp
+                @foreach ($postings as $posting)
+                @if ($count < 20)    
                     <div class="card-myBoard">
                         <div class="card-image">
                             <img src="{{ url('photo_posting/' . $posting->photo) }}" alt="{{ $posting-> title }}" width="300">
@@ -25,6 +27,8 @@
                             <p class="card-info">{{ $posting-> description }}</p>
                         </div>
                     </div>
+                @endif
+                @php $count++; @endphp
                 @endforeach
                 </div>
             <div class="showmore">

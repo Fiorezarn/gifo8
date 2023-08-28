@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer" id="Contact">
         <div class="container">
             <div class="footer-content">
                 <div class="row">
@@ -24,8 +24,7 @@
                             <ul class="list">
                                 <li><a href="#">Alamat</a></li>
                                 <li><a href="#">WA</a></li>
-                                <li><a href="#">Animal Saves</a></li>
-                                <li><a href="#">Help Orphan</a></li>
+                                <li><a href="#">Email</a></li>
                             </ul>
                         </div>
                     </div>
